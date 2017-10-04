@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="say-hello">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `say-hello`
+     * Says Hello
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class SayHello extends Polymer.Element {
+      static get is() { return 'say-hello'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'say-hello'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(SayHello.is, SayHello);
+  </script>
+</dom-module>
